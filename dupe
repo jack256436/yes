@@ -1,0 +1,35 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Islands Dupe Script", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Main = Window:MakeTab({
+    Name = "Dupe",
+    Icon = "rbxassetid://8950621656",
+    PremiumOnly = false
+})
+Main:AddButton({
+    Name = "Dupe (Item dupe)",
+    Callback = function()
+              getgenv().fpsBoost = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/jack256436/dupe/main/Islands-Dupe')))()
+OrionLib:MakeNotification({
+    Name = "Executed",
+    Content = "Successfully Executed",
+    Image = "rbxassetid://8950621656",
+    Time = 5
+})
+      end    
+})
+
+Main:AddButton({
+    Name = "Dupe (Coin dupe being made will be up soon)",
+    Callback = function()
+              getgenv().fpsBoost = false
+
+OrionLib:MakeNotification({
+    Name = "Executed",
+    Content = "Successfully Executed",
+    Image = "rbxassetid://8950621656",
+    Time = 5
+})
+      end    
+})
